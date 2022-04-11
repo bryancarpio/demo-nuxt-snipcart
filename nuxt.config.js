@@ -30,6 +30,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/snipcart'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -70,6 +71,14 @@ export default {
         },
       },
     },
+  },
+
+  snipcart: {
+    version: 'v3.0.23',
+    key: process.env.SNIPCART_API_KEY,
+    attributes: [
+      ['data-config-modal-style', 'side']
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
