@@ -81,6 +81,10 @@ export default {
     ]
   },
 
+  env: {
+    siteUrl: process.env.SITE_URL || "http://localhost:3000"
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
