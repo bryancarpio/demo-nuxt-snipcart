@@ -1,7 +1,6 @@
-<!--<nuxt-link :to="`/products/${product.id}`">-->
 <template>
   <v-card
-    class="mx-auto"
+    class="mx-auto my-5"
     max-width="344"
   >
     <v-img
@@ -10,29 +9,35 @@
     ></v-img>
 
     <v-card-title>
-      Title product
+      {{ product.title }}
     </v-card-title>
 
     <v-card-subtitle>
-      subtitle product
+      {{ product.description }}
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn
-        color="orange lighten-2"
-        text
-      >
-        see more
-      </v-btn>
+      <nuxt-link :to="`/products/${product.id}`">
+        <v-btn
+          color="orange lighten-2"
+          text
+        >
+          see more
+        </v-btn>
+      </nuxt-link>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
 export default {
-  data: () => ({
-
-  }),
+  props: {
+    product: {
+      type: Object,
+      required: true,
+    },
+  },
+  data: () => ({}),
 }
 </script>
 
