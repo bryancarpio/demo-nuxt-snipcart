@@ -1,9 +1,9 @@
 export const state = () => ({
   products: [
-    { id: 1, title: 'lorem 1', description: 'lorem ipsum 1', image: 'https://picsum.photos/800/500', price: 10 },
-    { id: 2, title: 'lorem 2', description: 'lorem ipsum 2', image: 'https://picsum.photos/800/500', price: 20 },
-    { id: 3, title: 'lorem 3', description: 'lorem ipsum 3', image: 'https://picsum.photos/800/500', price: 30 },
-    { id: 4, title: 'lorem 4', description: 'lorem ipsum 4', image: 'https://picsum.photos/800/500', price: 40 },
+    { id: 1, title: 'lorem 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', image: 'https://picsum.photos/800/500?random=1', price: 10 },
+    { id: 2, title: 'lorem 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', image: 'https://picsum.photos/800/500?grayscale', price: 20 },
+    { id: 3, title: 'lorem 3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', image: 'https://picsum.photos/800/500?blur', price: 30 },
+    { id: 4, title: 'lorem 4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', image: 'https://picsum.photos/800/500?random=2', price: 40 },
   ]
 })
 
@@ -24,4 +24,7 @@ export const mutations = {
 
 export const getters = {
   list: state => state.products,
+  get: (state) => (id) => {
+    return state.products.find(product => product.id === id)
+  }
 }
