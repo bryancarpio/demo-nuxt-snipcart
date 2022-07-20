@@ -27,6 +27,10 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon class="snipcart-checkout">mdi-cart</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
