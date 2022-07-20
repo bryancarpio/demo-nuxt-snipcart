@@ -31,7 +31,6 @@
     <v-main>
       <v-container>
         <Nuxt />
-        <div hidden id="snipcart" :data-api-key="snipcart_api_key"></div>
       </v-container>
     </v-main>
     <v-footer :absolute="!fixed" app>
@@ -59,7 +58,6 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'demo-nuxt-snipcart',
-      snipcart_api_key: process.env.SNIPCART_API_KEY,
     }
   },
 }
