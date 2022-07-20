@@ -4,7 +4,7 @@
     <div v-if="this.product !== null">
       <div class="flex flex-col items-center border rounded-lg bg-gray-100">
         <div class="w-full bg-white rounded-lg flex justify-center">
-          <img :src="product.image" width="375" />
+          <img :src="product.image" width="375"/>
         </div>
         <div class="w-full p-5 flex flex-col justify-between">
           <div>
@@ -21,8 +21,9 @@
               {{ product.title }}
             </h4>
             <div class="mt-1 text-gray-600">{{ product.description }}</div>
+            <div class="mt-1 text-gray-600">Price: <span class="font-weight-bold yellow--text">{{ product.price }} €</span></div>
           </div>
-          <button
+          <v-btn
             class="
               snipcart-add-item
               mt-4
@@ -43,7 +44,7 @@
             :data-item-image="product.image"
             :data-item-name="product.title">
             Add to cart
-          </button>
+          </v-btn>
         </div>
       </div>
     </div>
@@ -52,9 +53,8 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      // product: null,
       siteUrl: process.env.siteUrl
     }
   },
