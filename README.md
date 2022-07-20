@@ -17,7 +17,7 @@
    SNIPCART_API_KEY = 'ENTER YOUR API';
    ```
 
-## Build Setup
+### Build Setup
 
 ```bash
 # install dependencies
